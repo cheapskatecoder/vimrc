@@ -149,3 +149,35 @@ nmap gd :Gdiff<cr>
 nmap gw :Gwrite<cr>
 
 noremap qr :q<cr>
+
+noremap snonu :set nonu<cr>
+noremap snu :set nu<cr>
+
+let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
+let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
+let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's keyword
+let g:ycm_complete_in_comments = 1 " Completion in comments
+let g:ycm_complete_in_strings = 1 " Completion in string
+
+" Track the engine.
+Plugin 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
+
+let g:UltiSnipsExpandTrigger       = "<c-j>"
+let g:UltiSnipsJumpForwardTrigger  = "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
+let g:UltiSnipsListSnippets        = "<c-k>" "List possible snippets based on current file
+
+" highlight line cursor on 
+set cursorline
+
+filetype indent on                                                                                                                                                                                                                            
+" shows brackts match
+"These two allow us to move around lines visually. So if there's a very long line that gets visually wrapped to two lines,
+" j won't skip over the fake part of the visual line in favor of the next real line.
+nnoremap j gj
+nnoremap k gk
+
+let mapleader=","
