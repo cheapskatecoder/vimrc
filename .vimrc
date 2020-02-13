@@ -181,3 +181,7 @@ nnoremap j gj
 nnoremap k gk
 
 let mapleader=","
+
+" enable spellcheck
+" use z= to get suggestions
+:set spell spelllang=en_us
