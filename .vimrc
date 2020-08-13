@@ -1,3 +1,4 @@
+set shell=/bin/bash
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -135,8 +136,6 @@ set laststatus=2
 Plugin 'Chiel92/vim-autoformat'
 noremap <F3> :Autoformat<CR>
 
-
-Plugin 'honza/vim-snippets'
 let g:ycm_use_ultisnips_completer = 1
 
 nmap gb :Gblame<cr>
@@ -184,4 +183,8 @@ let mapleader=","
 
 " enable spellcheck
 " use z= to get suggestions
-:set spell spelllang=en_us
+" :set spell spelllang=en_us
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+
+nnoremap <C-f> :Files<CR>
